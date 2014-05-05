@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * UserBasicInfo
  *
- * @ORM\Table(name="user_basic_info")
+ * @ORM\Table(name="users_basic_info")
  * @ORM\Entity(repositoryClass="MyBlog\CoreBundle\Repository\UserBasicInfoRepository")
  */
 class UserBasicInfo
@@ -63,7 +63,7 @@ class UserBasicInfo
     private $birthdate;
     
     /**
-     * @ORM\OneToOne(targetEntity="User", inversedBy="basicInfo")
+     * @ORM\OneToOne(targetEntity="User", inversedBy="basicInfo" )
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     protected $user;
@@ -192,7 +192,7 @@ class UserBasicInfo
     /**
      * Set birthdate
      *
-     * @param string $birthdate
+     * @param \DateTime $birthdate
      * @return UserBasicInfo
      */
     public function setBirthdate($birthdate)
@@ -205,7 +205,7 @@ class UserBasicInfo
     /**
      * Get birthdate
      *
-     * @return string 
+     * @return \DateTime 
      */
     public function getBirthdate()
     {
