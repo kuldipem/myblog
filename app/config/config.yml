@@ -73,7 +73,9 @@ doctrine:
                 auto_mapping: true
                 mappings:
                     ApplicationSonataUserBundle: ~
+                    ApplicationSonataMediaBundle: ~
                     SonataUserBundle: ~
+                    SonataMediaBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:

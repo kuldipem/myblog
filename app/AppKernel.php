@@ -20,14 +20,17 @@ class AppKernel extends Kernel {
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Sonata\MediaBundle\SonataMediaBundle(),
+            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            
             new FOS\UserBundle\FOSUserBundle(),
-            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
-
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
             new MyBlog\CoreBundle\MyBlogCoreBundle(),
             new MyBlog\Front\AssetsBundle\MyBlogFrontAssetsBundle(),
             new MyBlog\Admin\ManageBundle\MyBlogAdminManageBundle(),
