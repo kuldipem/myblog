@@ -1,0 +1,56 @@
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        sonata.admin.block.search_result:
+             contexts:  [admin]
+        sonata.user.block.menu:    # used to display the menu in profile pages
+        sonata.user.block.account: # used to display menu option (login option)
+
+sonata_admin:
+    security:
+        handler: sonata.admin.security.handler.role
+    title:      Symblog Admin
+    templates:
+        layout: MyBlogAdminManageBundle::standard_layout.html.twig
+        search_result_block:  SonataAdminBundle:Block:block_search_result.html.twig
+#    dashboard:
+#        blocks:
+#             -
+#               position: left
+#               class: col-md-6
+#               type: sonata.admin.block.admin_list
+#             -
+#               position: right
+#               class: col-md-6
+#               type: sonata.admin.block.admin_list
+#               settings:
+#                  groups: [Content]
+
+
+
+sonata_user:
+    security_acl:             false
+    table:
+        user_group:           fos_user_user_group
+
+    impersonating:
+        route:                page_slug
+        parameters:           { path: / }
+
+    manager_type:             orm
+
+    profile:
+        form:
+            type:                 sonata_user_profile
+            handler:              sonata.user.profile.form.handler.default
+            name:                 sonata_user_profile_form
+            validation_groups:
+                # Defaults:
+                - Profile
+                - Default
+
+
+
+        

@@ -1,8 +1,10 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: twig_globals.yml }
     - { resource: doctrine_extentions.yml }
-    - { resource: fos_bundle.yml }
+    - { resource: sonata_bundles.yml }
+    - { resource: fos_bundles.yml }
 
 framework:
     #esi:             ~
@@ -58,13 +60,20 @@ doctrine:
         charset:  UTF8
         mapping_types:
             enum: string
+        types:
+            json: Sonata\Doctrine\Types\JsonType
         # if using pdo_sqlite as your database driver, add the path in parameters.yml
         # e.g. database_path: "%kernel.root_dir%/data/data.db3"
         # path:     "%database_path%"
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
-        auto_mapping: true
+        entity_managers:
+            default:
+                auto_mapping: true
+                mappings:
+                    ApplicationSonataUserBundle: ~
+                    SonataUserBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:

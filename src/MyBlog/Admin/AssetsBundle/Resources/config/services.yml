@@ -1,0 +1,7 @@
+parameters:
+#    my_blog_admin_assets.example.class: MyBlog\Admin\AssetsBundle\Example
+
+services:
+#    my_blog_admin_assets.example:
+#        class: %my_blog_admin_assets.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
