@@ -3,8 +3,67 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "90ab1a549492fc497b4c8554615b0f05",
+    "hash": "ffdec80037ff45eee33b9d1369c15ea2",
     "packages": [
+        {
+            "name": "dflydev/markdown",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dflydev/dflydev-markdown.git",
+                "reference": "6baed9b50f29c980795b6656d43722aadb126f7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dflydev/dflydev-markdown/zipball/6baed9b50f29c980795b6656d43722aadb126f7e",
+                "reference": "6baed9b50f29c980795b6656d43722aadb126f7e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "dflydev\\markdown": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                },
+                {
+                    "name": "Michel Fortin",
+                    "homepage": "http://michelf.com"
+                },
+                {
+                    "name": "John Gruber",
+                    "homepage": "http://daringfireball.net"
+                }
+            ],
+            "description": "PHP Markdown & Extra",
+            "homepage": "http://github.com/dflydev/dflydev-markdown",
+            "keywords": [
+                "markdown"
+            ],
+            "time": "2013-09-23 12:00:18"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.1.2",
@@ -741,6 +800,61 @@
             "time": "2014-02-08 16:35:09"
         },
         {
+            "name": "egeloen/ckeditor-bundle",
+            "version": "2.2.1",
+            "target-dir": "Ivory/CKEditorBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egeloen/IvoryCKEditorBundle.git",
+                "reference": "8f7ce17be05e649c2a7f3a2e2577836631de7c83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egeloen/IvoryCKEditorBundle/zipball/8f7ce17be05e649c2a7f3a2e2577836631de7c83",
+                "reference": "8f7ce17be05e649c2a7f3a2e2577836631de7c83",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/form": ">=2.1",
+                "symfony/framework-bundle": ">=2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "twig/twig": "1.*"
+            },
+            "suggest": {
+                "helios-ag/fm-elfinder-bundle": "Allows to use the elfinder as CKEditor file manager",
+                "twig/twig": "Allows to use Ivory CKEditor twig templates"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ivory\\CKEditorBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                }
+            ],
+            "description": "Provides a CKEditor integration for your Symfony2 Project.",
+            "keywords": [
+                "CKEditor"
+            ],
+            "time": "2014-01-31 15:15:28"
+        },
+        {
             "name": "friendsofsymfony/rest-bundle",
             "version": "1.3.1",
             "target-dir": "FOS/RestBundle",
@@ -1429,6 +1543,65 @@
                 "media"
             ],
             "time": "2014-02-24 18:17:33"
+        },
+        {
+            "name": "knplabs/knp-markdown-bundle",
+            "version": "1.2.0",
+            "target-dir": "Knp/Bundle/MarkdownBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpMarkdownBundle.git",
+                "reference": "9f4f88919db4f4b7f8e374ac0de1a93e05b05646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMarkdownBundle/zipball/9f4f88919db4f4b7f8e374ac0de1a93e05b05646",
+                "reference": "9f4f88919db4f4b7f8e374ac0de1a93e05b05646",
+                "shasum": ""
+            },
+            "require": {
+                "dflydev/markdown": "1.0.*@dev",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.0"
+            },
+            "suggest": {
+                "ext-sundown": "to use optional support for php-sundown extension instead of php implementation",
+                "symfony/twig-bundle": "to use the Twig markdown filter"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Bundle\\MarkdownBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/KnpMarkdownBundle/contributors"
+                }
+            ],
+            "description": "Knplabs markdown bundle transforms markdown into html",
+            "homepage": "http://github.com/KnpLabs/KnpMarkdownBundle",
+            "keywords": [
+                "bundle",
+                "knp",
+                "knplabs",
+                "markdown"
+            ],
+            "time": "2013-05-20 08:29:54"
         },
         {
             "name": "knplabs/knp-menu",
@@ -2352,17 +2525,80 @@
             "time": "2014-02-13 15:12:33"
         },
         {
-            "name": "sonata-project/core-bundle",
-            "version": "2.2.5",
+            "name": "sonata-project/classification-bundle",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-                "reference": "863809982c98b8444aeab1ff442c117d74f1a7c7"
+                "url": "https://github.com/sonata-project/SonataClassificationBundle.git",
+                "reference": "84b03751e5445e2e49a8c2ea4c773a6653872e3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/863809982c98b8444aeab1ff442c117d74f1a7c7",
-                "reference": "863809982c98b8444aeab1ff442c117d74f1a7c7",
+                "url": "https://api.github.com/repos/sonata-project/SonataClassificationBundle/zipball/84b03751e5445e2e49a8c2ea4c773a6653872e3a",
+                "reference": "84b03751e5445e2e49a8c2ea4c773a6653872e3a",
+                "shasum": ""
+            },
+            "require": {
+                "sonata-project/core-bundle": "~2.2@dev",
+                "sonata-project/datagrid-bundle": "~2.2@dev",
+                "sonata-project/doctrine-orm-admin-bundle": "~2.2@dev",
+                "sonata-project/media-bundle": "~2.2",
+                "symfony/symfony": "~2.2"
+            },
+            "require-dev": {
+                "friendsofsymfony/rest-bundle": "~1.1",
+                "jms/serializer-bundle": "~0.11"
+            },
+            "suggest": {
+                "sonata-project/media-bundle": "~2.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sonata\\ClassificationBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataClassificationBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonataClassificationBundle",
+            "homepage": "http://sonata-project.org/bundles/classification",
+            "keywords": [
+                "category",
+                "tag",
+                "taxonomy"
+            ],
+            "time": "2014-05-02 08:41:09"
+        },
+        {
+            "name": "sonata-project/core-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataCoreBundle.git",
+                "reference": "664631de527373a3b1ee74772e83484679fb65a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/664631de527373a3b1ee74772e83484679fb65a0",
+                "reference": "664631de527373a3b1ee74772e83484679fb65a0",
                 "shasum": ""
             },
             "require": {
@@ -2375,6 +2611,9 @@
             "require-dev": {
                 "doctrine/orm": "~2.4",
                 "doctrine/phpcr-odm": "~1.0",
+                "friendsofsymfony/rest-bundle": "~1.1",
+                "jms/serializer-bundle": "~0.11",
+                "sensio/framework-extra-bundle": "~2.2",
                 "sonata-project/exporter": "~1.3"
             },
             "type": "symfony-bundle",
@@ -2408,7 +2647,7 @@
             "keywords": [
                 "sonata"
             ],
-            "time": "2014-02-14 14:24:51"
+            "time": "2014-04-30 12:21:30"
         },
         {
             "name": "sonata-project/datagrid-bundle",
@@ -2689,6 +2928,66 @@
             "time": "2013-10-24 13:43:33"
         },
         {
+            "name": "sonata-project/formatter-bundle",
+            "version": "2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataFormatterBundle.git",
+                "reference": "3369c671fc43ec23013719d83bd681189357453b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonataFormatterBundle/zipball/3369c671fc43ec23013719d83bd681189357453b",
+                "reference": "3369c671fc43ec23013719d83bd681189357453b",
+                "shasum": ""
+            },
+            "require": {
+                "egeloen/ckeditor-bundle": "~2.2",
+                "knplabs/knp-markdown-bundle": "~1.2.0",
+                "sonata-project/block-bundle": "~2.2,>=2.2.1",
+                "sonata-project/core-bundle": "~2.2",
+                "sonata-project/markitup-bundle": "~2.1",
+                "symfony/symfony": "~2.3",
+                "twig/twig": "*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sonata\\FormatterBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataFormatterBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonataFormatterBundle",
+            "homepage": "http://sonata-project.org/bundles/formatter",
+            "keywords": [
+                "CKEditor",
+                "formatter",
+                "markdown",
+                "markitup",
+                "sonata"
+            ],
+            "time": "2014-02-16 11:29:27"
+        },
+        {
             "name": "sonata-project/google-authenticator",
             "version": "1.0.2",
             "source": {
@@ -2852,37 +3151,101 @@
             "time": "2014-03-19 11:45:00"
         },
         {
-            "name": "sonata-project/media-bundle",
-            "version": "dev-master",
+            "name": "sonata-project/markitup-bundle",
+            "version": "2.1.0",
+            "target-dir": "Sonata/MarkItUpBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sonata-project/SonataMediaBundle.git",
-                "reference": "57407305edfabbe5a0a4503377d387a6c78843ed"
+                "url": "https://github.com/sonata-project/SonataMarkItUpBundle.git",
+                "reference": "869b85ba924aa2333e5464bc0193813c31ea5859"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/57407305edfabbe5a0a4503377d387a6c78843ed",
-                "reference": "57407305edfabbe5a0a4503377d387a6c78843ed",
+                "url": "https://api.github.com/repos/sonata-project/SonataMarkItUpBundle/zipball/869b85ba924aa2333e5464bc0193813c31ea5859",
+                "reference": "869b85ba924aa2333e5464bc0193813c31ea5859",
+                "shasum": ""
+            },
+            "require": {
+                "sonata-project/jquery-bundle": "1.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0": "2.0.x-dev",
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Sonata\\MarkItUpBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Jay Salvat",
+                    "homepage": "http://jaysalvat.com"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataMarkItUpBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonataMarkItUpBundle",
+            "homepage": "http://sonata-project.org/bundles/markitup",
+            "keywords": [
+                "bbcode",
+                "editor",
+                "html",
+                "jquery",
+                "markdown",
+                "markitup",
+                "markup",
+                "sonata",
+                "textile",
+                "wiki"
+            ],
+            "time": "2013-02-25 13:32:15"
+        },
+        {
+            "name": "sonata-project/media-bundle",
+            "version": "2.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataMediaBundle.git",
+                "reference": "a04a7a8aa9e04c106b034d74af3700ab3c64934b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/a04a7a8aa9e04c106b034d74af3700ab3c64934b",
+                "reference": "a04a7a8aa9e04c106b034d74af3700ab3c64934b",
                 "shasum": ""
             },
             "require": {
                 "friendsofsymfony/rest-bundle": "~1.1",
                 "imagine/imagine": "*@stable",
-                "jms/serializer-bundle": "~0.11",
                 "knplabs/gaufrette": ">=0.1.4",
                 "kriswallsmith/buzz": "0.*",
                 "nelmio/api-doc-bundle": "~2.4",
-                "sonata-project/core-bundle": "~2.2",
+                "sonata-project/core-bundle": "~2.2@dev",
                 "sonata-project/doctrine-extensions": "~1.0",
                 "sonata-project/easy-extends-bundle": "~2.1",
-                "sonata-project/intl-bundle": "~2.2",
                 "sonata-project/notification-bundle": "~2.2",
-                "symfony/symfony": "~2.3"
+                "symfony/symfony": "~2.2"
             },
             "require-dev": {
                 "amazonwebservices/aws-sdk-for-php": "~1.5",
                 "doctrine/mongodb-odm": "~1.0@dev",
-                "sonata-project/doctrine-orm-admin-bundle": "~2.3@dev",
+                "friendsofsymfony/rest-bundle": "~1.2",
+                "sonata-project/doctrine-orm-admin-bundle": "~2.2@dev,>=2.2.1",
                 "sonata-project/doctrine-phpcr-admin-bundle": "~1.0",
                 "sonata-project/formatter-bundle": "~2.2@dev",
                 "sonata-project/seo-bundle": "~1.1"
@@ -2891,14 +3254,14 @@
                 "amazonwebservices/aws-sdk-for-php": "~1.5",
                 "liip/imagine-bundle": "~0.9",
                 "rackspace/php-opencloud": "~1.6",
-                "sonata-project/doctrine-orm-admin-bundle": "~2.3",
+                "sonata-project/doctrine-orm-admin-bundle": "~2.2,>=2.2.1",
                 "sonata-project/seo-bundle": "~1.1",
                 "tilleuls/ckeditor-sonata-mediabundle": "~1.0"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-master": "2.2.x-dev"
                 }
             },
             "autoload": {
@@ -2933,7 +3296,81 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2014-05-02 17:39:19"
+            "time": "2014-02-14 14:28:01"
+        },
+        {
+            "name": "sonata-project/news-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataNewsBundle.git",
+                "reference": "7d944a86f46cffaa6ed8f7811d533249ceef4039"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonataNewsBundle/zipball/7d944a86f46cffaa6ed8f7811d533249ceef4039",
+                "reference": "7d944a86f46cffaa6ed8f7811d533249ceef4039",
+                "shasum": ""
+            },
+            "require": {
+                "friendsofsymfony/rest-bundle": "~1.1",
+                "jms/serializer-bundle": "~0.11",
+                "nelmio/api-doc-bundle": "~2.4",
+                "sonata-project/admin-bundle": "~2.2,>=2.2.7",
+                "sonata-project/classification-bundle": "~2.2",
+                "sonata-project/core-bundle": "~2.2@dev",
+                "sonata-project/datagrid-bundle": "~2.2@dev",
+                "sonata-project/easy-extends-bundle": "~2.1",
+                "sonata-project/formatter-bundle": "~2.3",
+                "sonata-project/intl-bundle": "~2.1",
+                "sonata-project/media-bundle": "~2.2",
+                "sonata-project/user-bundle": "~2.2",
+                "symfony/symfony": "~2.3"
+            },
+            "require-dev": {
+                "doctrine/orm": "*",
+                "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
+                "sonata-project/notification-bundle": "2.2.*@dev"
+            },
+            "suggest": {
+                "sonata-project/doctrine-orm-admin-bundle": "~2.2.*",
+                "sonata-project/notification-bundle": "~2.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sonata\\NewsBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataNewsBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonataNewsBundle",
+            "homepage": "http://sonata-project.org/bundles/news",
+            "keywords": [
+                "blog",
+                "news",
+                "post",
+                "sonata"
+            ],
+            "time": "2014-04-28 17:55:10"
         },
         {
             "name": "sonata-project/notification-bundle",
@@ -3746,13 +4183,15 @@
     "stability-flags": {
         "doctrine/doctrine-fixtures-bundle": 20,
         "stof/doctrine-extensions-bundle": 20,
+        "sonata-project/core-bundle": 20,
         "sonata-project/admin-bundle": 20,
         "sonata-project/datagrid-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
         "sonata-project/jquery-bundle": 20,
         "sonata-project/easy-extends-bundle": 20,
         "sonata-project/user-bundle": 20,
-        "sonata-project/media-bundle": 20
+        "sonata-project/news-bundle": 20,
+        "sonata-project/classification-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
