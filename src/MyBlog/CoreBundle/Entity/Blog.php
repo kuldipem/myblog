@@ -37,6 +37,16 @@ class Blog {
     protected $content;
 
     /**
+     * @ORM\Column(name="raw_content", type="text")
+     */
+    protected $rawContent;
+
+    /**
+     * @ORM\Column(name="content_formatter", type="string" )
+     */
+    protected $contentFormatter;
+
+    /**
      * @ORM\Column(type="string")
      */
     protected $slug;
@@ -82,14 +92,12 @@ class Blog {
         return $this->getTitle();
     }
 
-
     /**
      * Get id
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -99,8 +107,7 @@ class Blog {
      * @param string $title
      * @return Blog
      */
-    public function setTitle($title)
-    {
+    public function setTitle($title) {
         $this->title = $title;
 
         return $this;
@@ -111,8 +118,7 @@ class Blog {
      *
      * @return string 
      */
-    public function getTitle()
-    {
+    public function getTitle() {
         return $this->title;
     }
 
@@ -122,8 +128,7 @@ class Blog {
      * @param string $content
      * @return Blog
      */
-    public function setContent($content)
-    {
+    public function setContent($content) {
         $this->content = $content;
 
         return $this;
@@ -134,8 +139,7 @@ class Blog {
      *
      * @return string 
      */
-    public function getContent()
-    {
+    public function getContent() {
         return $this->content;
     }
 
@@ -145,8 +149,7 @@ class Blog {
      * @param string $slug
      * @return Blog
      */
-    public function setSlug($slug)
-    {
+    public function setSlug($slug) {
         $this->slug = $slug;
 
         return $this;
@@ -157,8 +160,7 @@ class Blog {
      *
      * @return string 
      */
-    public function getSlug()
-    {
+    public function getSlug() {
         return $this->slug;
     }
 
@@ -168,8 +170,7 @@ class Blog {
      * @param \DateTime $createdAt
      * @return Blog
      */
-    public function setCreatedAt($createdAt)
-    {
+    public function setCreatedAt($createdAt) {
         $this->createdAt = $createdAt;
 
         return $this;
@@ -180,8 +181,7 @@ class Blog {
      *
      * @return \DateTime 
      */
-    public function getCreatedAt()
-    {
+    public function getCreatedAt() {
         return $this->createdAt;
     }
 
@@ -191,8 +191,7 @@ class Blog {
      * @param \DateTime $updatedAt
      * @return Blog
      */
-    public function setUpdatedAt($updatedAt)
-    {
+    public function setUpdatedAt($updatedAt) {
         $this->updatedAt = $updatedAt;
 
         return $this;
@@ -203,8 +202,7 @@ class Blog {
      *
      * @return \DateTime 
      */
-    public function getUpdatedAt()
-    {
+    public function getUpdatedAt() {
         return $this->updatedAt;
     }
 
@@ -214,8 +212,7 @@ class Blog {
      * @param \MyBlog\CoreBundle\Entity\Comment $comments
      * @return Blog
      */
-    public function addComment(\MyBlog\CoreBundle\Entity\Comment $comments)
-    {
+    public function addComment(\MyBlog\CoreBundle\Entity\Comment $comments) {
         $this->comments[] = $comments;
 
         return $this;
@@ -226,8 +223,7 @@ class Blog {
      *
      * @param \MyBlog\CoreBundle\Entity\Comment $comments
      */
-    public function removeComment(\MyBlog\CoreBundle\Entity\Comment $comments)
-    {
+    public function removeComment(\MyBlog\CoreBundle\Entity\Comment $comments) {
         $this->comments->removeElement($comments);
     }
 
@@ -236,8 +232,7 @@ class Blog {
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getComments()
-    {
+    public function getComments() {
         return $this->comments;
     }
 
@@ -247,8 +242,7 @@ class Blog {
      * @param \MyBlog\CoreBundle\Entity\Likes $likes
      * @return Blog
      */
-    public function addLike(\MyBlog\CoreBundle\Entity\Likes $likes)
-    {
+    public function addLike(\MyBlog\CoreBundle\Entity\Likes $likes) {
         $this->likes[] = $likes;
 
         return $this;
@@ -259,8 +253,7 @@ class Blog {
      *
      * @param \MyBlog\CoreBundle\Entity\Likes $likes
      */
-    public function removeLike(\MyBlog\CoreBundle\Entity\Likes $likes)
-    {
+    public function removeLike(\MyBlog\CoreBundle\Entity\Likes $likes) {
         $this->likes->removeElement($likes);
     }
 
@@ -269,8 +262,7 @@ class Blog {
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getLikes()
-    {
+    public function getLikes() {
         return $this->likes;
     }
 
@@ -280,8 +272,7 @@ class Blog {
      * @param \MyBlog\CoreBundle\Entity\User $user
      * @return Blog
      */
-    public function setUser(\MyBlog\CoreBundle\Entity\User $user = null)
-    {
+    public function setUser(\MyBlog\CoreBundle\Entity\User $user = null) {
         $this->user = $user;
 
         return $this;
@@ -292,8 +283,54 @@ class Blog {
      *
      * @return \MyBlog\CoreBundle\Entity\User 
      */
-    public function getUser()
-    {
+    public function getUser() {
         return $this->user;
+    }
+
+
+    /**
+     * Set rawContent
+     *
+     * @param string $rawContent
+     * @return Blog
+     */
+    public function setRawContent($rawContent)
+    {
+        $this->rawContent = $rawContent;
+
+        return $this;
+    }
+
+    /**
+     * Get rawContent
+     *
+     * @return string 
+     */
+    public function getRawContent()
+    {
+        return $this->rawContent;
+    }
+
+    /**
+     * Set contentFormatter
+     *
+     * @param string $contentFormatter
+     * @return Blog
+     */
+    public function setContentFormatter($contentFormatter)
+    {
+        $this->contentFormatter = $contentFormatter;
+
+        return $this;
+    }
+
+    /**
+     * Get contentFormatter
+     *
+     * @return string 
+     */
+    public function getContentFormatter()
+    {
+        return $this->contentFormatter;
     }
 }

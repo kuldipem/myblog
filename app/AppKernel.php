@@ -15,7 +15,11 @@ class AppKernel extends Kernel {
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            
+            // doctrine extentions
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+           
+            // sonata core & helper bundles
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
@@ -29,17 +33,22 @@ class AppKernel extends Kernel {
             new Sonata\IntlBundle\SonataIntlBundle(),
             new Sonata\FormatterBundle\SonataFormatterBundle(),
             new Sonata\ClassificationBundle\SonataClassificationBundle(),
+           
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            
+            /** KNPLab Bundles **/
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
             
-            /** MY Bundles**/
+            /** Sontata Extended bundls* */
             new Application\Sonata\NewsBundle\ApplicationSonataNewsBundle(),
             new Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
+            
+            /** My Bundles * */
             new MyBlog\CoreBundle\MyBlogCoreBundle(),
             new MyBlog\Front\AssetsBundle\MyBlogFrontAssetsBundle(),
             new MyBlog\Admin\ManageBundle\MyBlogAdminManageBundle(),
