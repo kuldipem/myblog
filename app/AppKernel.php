@@ -18,35 +18,6 @@ class AppKernel extends Kernel {
             
             // doctrine extentions
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-           
-            // sonata core & helper bundles
-            new Sonata\CoreBundle\SonataCoreBundle(),
-            new Sonata\BlockBundle\SonataBlockBundle(),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
-            new Sonata\MediaBundle\SonataMediaBundle(),
-            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
-            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            new Sonata\AdminBundle\SonataAdminBundle(),
-            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-            new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
-            new Sonata\NewsBundle\SonataNewsBundle(),
-            new Sonata\IntlBundle\SonataIntlBundle(),
-            new Sonata\FormatterBundle\SonataFormatterBundle(),
-            new Sonata\ClassificationBundle\SonataClassificationBundle(),
-           
-            new JMS\SerializerBundle\JMSSerializerBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
-            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
-            
-            /** KNPLab Bundles **/
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
-            
-            /** Sontata Extended bundls* */
-            new Application\Sonata\NewsBundle\ApplicationSonataNewsBundle(),
-            new Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle(),
-            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
-            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
             
             /** My Bundles * */
             new MyBlog\CoreBundle\MyBlogCoreBundle(),
@@ -67,9 +38,9 @@ class AppKernel extends Kernel {
     public function registerContainerConfiguration(LoaderInterface $loader) {
         $loader->load(__DIR__ . '/config/config_' . $this->getEnvironment() . '.yml');
     }
-
-    public function init() {
-        parent::init();
+    
+    public function __construct($environment, $debug) {
+        parent::__construct($environment, $debug);
         date_default_timezone_set("Asia/Kolkata");
     }
 

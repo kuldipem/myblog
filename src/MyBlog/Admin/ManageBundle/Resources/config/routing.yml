@@ -1,3 +1,0 @@
-my_blog_admin_manage_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: MyBlogAdminManageBundle:Default:index }

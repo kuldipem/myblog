@@ -1,5 +1,8 @@
 twig:
     globals:
-        title: MyBlog
+        title: Myblog
+        admin:
+            title:
+                devider: "|"
         
                     

@@ -3,8 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: twig_globals.yml }
     - { resource: doctrine_extentions.yml }
-    - { resource: sonata_bundles.yml }
-    - { resource: fos_bundles.yml }
+
 
 framework:
     #esi:             ~
@@ -32,10 +31,6 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
-    form:
-        resources:
-            - 'SonataFormatterBundle:Form:formatter.html.twig'
-            - 'SonataMediaBundle:Form:media_widgets.html.twig'
 
 # Assetic Configuration
 assetic:
@@ -75,13 +70,6 @@ doctrine:
         entity_managers:
             default:
                 auto_mapping: true
-                mappings:
-                    ApplicationSonataUserBundle: ~
-                    ApplicationSonataMediaBundle: ~
-                    ApplicationSonataNewsBundle: ~
-                    SonataUserBundle: ~
-                    SonataMediaBundle: ~
-                    SonataNewsBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:

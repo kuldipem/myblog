@@ -36,20 +36,21 @@ class Blog {
      */
     protected $content;
 
-    /**
-     * @ORM\Column(name="raw_content", type="text")
-     */
-    protected $rawContent;
-
-    /**
-     * @ORM\Column(name="content_formatter", type="string" )
-     */
-    protected $contentFormatter;
 
     /**
      * @ORM\Column(type="string")
+     * @Gedmo\Slug(fields={"id", "title"})
      */
     protected $slug;
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="blogs")
+     * @ORM\JoinTable(name="blog_tags",
+     *      joinColumns={@ORM\JoinColumn(name="blog_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="tag_id", referencedColumnName="id")}
+     *      )
+     */
+    protected $tags;
 
     /**
      * @ORM\OneToMany(targetEntity="Comment", mappedBy="blog", cascade={"persist", "remove"})
@@ -86,6 +87,7 @@ class Blog {
     public function __construct() {
         $this->comments = new ArrayCollection();
         $this->likes = new ArrayCollection();
+        $this->tags=new ArrayCollection();
     }
 
     public function __toString() {
@@ -289,48 +291,48 @@ class Blog {
 
 
     /**
-     * Set rawContent
+     * Set tags
      *
-     * @param string $rawContent
+     * @param array $tags
      * @return Blog
      */
-    public function setRawContent($rawContent)
+    public function setTags($tags)
     {
-        $this->rawContent = $rawContent;
+        $this->tags = $tags;
 
         return $this;
     }
 
     /**
-     * Get rawContent
+     * Get tags
      *
-     * @return string 
+     * @return array 
      */
-    public function getRawContent()
+    public function getTags()
     {
-        return $this->rawContent;
+        return $this->tags;
     }
 
     /**
-     * Set contentFormatter
+     * Add tags
      *
-     * @param string $contentFormatter
+     * @param \MyBlog\CoreBundle\Entity\Tag $tags
      * @return Blog
      */
-    public function setContentFormatter($contentFormatter)
+    public function addTag(\MyBlog\CoreBundle\Entity\Tag $tags)
     {
-        $this->contentFormatter = $contentFormatter;
+        $this->tags[] = $tags;
 
         return $this;
     }
 
     /**
-     * Get contentFormatter
+     * Remove tags
      *
-     * @return string 
+     * @param \MyBlog\CoreBundle\Entity\Tag $tags
      */
-    public function getContentFormatter()
+    public function removeTag(\MyBlog\CoreBundle\Entity\Tag $tags)
     {
-        return $this->contentFormatter;
+        $this->tags->removeElement($tags);
     }
 }
